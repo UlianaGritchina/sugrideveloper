@@ -1,73 +1,440 @@
-<HTML>
-    <HEAD>
-        <style>
-            p {text-align: center;}
-        </style>
-        <TITLE>Sugri</TITLE>
-    </HEAD>
-    <BODY>
-        
-        <p><b>iOS-Developer</b></p>
-        <p><a href="https://apps.apple.com/ru/app/world-words/id1670569128/">World Words</a>
-        
-        <p><b>Privacy Policy</b></p>
-        
-        Uliana Gritchina, built the Intellect World Words app as an Ad Supported app. This SERVICE is provided by Uliana Gritchina at no cost and is intended for use as is.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Sugri - World Words Privacy Policy</title>
 
-        This page is used to inform visitors regarding our policies with the collection, use, and disclosure of Personal Information if anyone decided to use our Service.
+<style>
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background: #f5f5f7;
+    color: #333;
+    line-height: 1.7;
+}
+.container {
+    max-width: 950px;
+    margin: 40px auto;
+    background: white;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,.08);
+}
+/* HEADER */
+.header img {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+    display: block;
+    filter: brightness(0.75);
+}
+.content {
+    padding: 40px;
+}
+h1 {
+    margin-top: 0;
+    font-size: 28px;
+}
+h2 {
+    margin-top: 40px;
+    font-size: 20px;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 8px;
+}
+h3 {
+    margin-top: 20px;
+    font-size: 18px;
+}
+p {
+    margin: 12px 0;
+}
+a {
+    color: #007AFF;
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+ul {
+    padding-left: 20px;
+}
+.top-links {
+    margin: 20px 0 30px;
+    text-align: center;
+}
+.card {
+    background: #f8f9fa;
+    padding: 16px;
+    border-radius: 12px;
+    margin-top: 12px;
+}
+.contact {
+    background: #f1f3f5;
+    padding: 16px;
+    border-radius: 12px;
+    margin-top: 10px;
+}
+.telegram {
+    background: linear-gradient(135deg, #e8f4ff, #f6fbff);
+    padding: 16px;
+    border-radius: 12px;
+    margin-top: 10px;
+}
+footer {
+    text-align: center;
+    font-size: 13px;
+    color: #888;
+    padding: 30px;
+}
+@media (max-width: 700px) {
+    .content {
+        padding: 22px;
+    }
+    .header img {
+        height: 200px;
+    }
+}
+/* APP STORE BUTTON */
+.store-button img {
+    width: clamp(120px, 30vw, 180px);
+    height: auto;
+    display: inline-block;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+.store-button img:hover {
+    transform: scale(1.05);
+    opacity: 0.9;
+}
+/* APP DESCRIPTION */
+.app-description {
+    margin-top: 10px;
+    padding: 20px;
+    background: #f8f9fa;
+    border-radius: 12px;
+}
+.app-description ul {
+    padding-left: 18px;
+}
+.app-description li {
+    margin-bottom: 12px;
+}
+.header {
+    position: relative;
+    overflow: hidden;
+}
+.header img {
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+    object-position: center;
+    filter: brightness(0.85);
+}
+</style>
+</head>
+<body>
 
-        If you choose to use our Service, then you agree to the collection and use of information in relation to this policy. The Personal Information that we collect is used for providing and improving the Service. We will not use or share your information with anyone except as described in this Privacy Policy.
-        
-        <p><b>World Words Premium</b></p>
-        World Words is a subscription that provides unlimited card storage and disables in-app advertising.
-        
-        You can cancel the subscription renewal in the profile settings in the menu of your device or in the "Manage subscriptions" section of the App Store application.
-        
-        Price: 0.49$ per month.
-        
-        <p><b>Information Collection and Use</b></p>
-        
-        For a better experience, while using our Service, we may require you to provide us with certain personally identifiable information, including but not limited to Name. The information that we request will be retained by us and used as described in this privacy policy.
+<div class="container">
 
-        The app does use third party services that may collect information used to identify you.
+    <!-- Язык переключатель -->
+    <div style="text-align:center; margin:10px;">
+        <button id="lang-en" style="margin-right:10px;">English</button>
+        <button id="lang-ru">Русский</button>
+    </div>
 
-        <p>Link to privacy policy of third party service providers used by the app</p>
-        <p><a href="https://yandex.ru/adv">YandexAds</a>
-        <p><a href="https://firebase.google.com/docs/analytics?hl=ru"> Google Firebase Analytics</a></p>
+    <!-- HEADER -->
+    <div class="header">
+        <img src="wwHeader.png" alt="World Words Header" id="header-image">
+    </div>
 
-        We want to inform you that whenever you use our Service, in a case of an error in the app we collect data and information (through third party products) on your phone called Log Data. This Log Data may include information such as your device Internet Protocol (“IP”) address, device name, operating system version, the configuration of the app when utilizing our Service, the time and date of your use of the Service, and other statistics.
+    <div class="content" id="content-area">
 
-        <p><b>Service Providers</b></p>
+        <h1 data-i18n="title">World Words</h1>
 
-        We may employ third-party companies and individuals due to the following reasons:
+        <!-- APP STORE BUTTON -->
+        <div class="top-links">
+            <a href="https://apps.apple.com/ru/app/world-words/id1670569128/" target="_blank" class="store-button">
+                <img src="storeButton.png" alt="Download on App Store" id="store-img">
+            </a>
+        </div>
 
-        To facilitate our Service;
-        To provide the Service on our behalf;
-        To perform Service-related services; or
-        To assist us in analyzing how our Service is used.
-        We want to inform users of this Service that these third parties have access to your Personal Information. The reason is to perform the tasks assigned to them on our behalf. However, they are obligated not to disclose or use the information for any other purpose.
+        <!-- APP DESCRIPTION -->
+        <div class="app-description" id="app-description">
 
-        <p><b>Security</b></p>
-        
-        We value your trust in providing us your Personal Information, thus we are striving to use commercially acceptable means of protecting it. But remember that no method of transmission over the internet, or method of electronic storage is 100% secure and reliable, and we cannot guarantee its absolute security.
+            <h2 data-i18n="app_description_title">Application Description</h2>
 
-        <p><b>Links to Other Sites</b></p>
-        
-        This Service may contain links to other sites. If you click on a third-party link, you will be directed to that site. Note that these external sites are not operated by us. Therefore, we strongly advise you to review the Privacy Policy of these websites. We have no control over and assume no responsibility for the content, privacy policies, or practices of any third-party sites or services.
+            <p data-i18n="app_description_text1">
+                <strong>World Words</strong> is a powerful and intuitive language learning app designed to help you memorize vocabulary effectively using interactive flashcards and active recall techniques.
+            </p>
 
-        <p><b>Children’s Privacy</b></p>
-        
-        These Services do not address anyone under the age of 4. We do not knowingly collect personally identifiable information from children under 4 years of age. In the case we discover that a child under 44 has provided us with personal information, we immediately delete this from our servers. If you are a parent or guardian and you are aware that your child has provided us with personal information, please contact us so that we will be able to do necessary actions.
+            <p data-i18n="app_description_text2">
+                The app turns language learning into a simple daily habit with tools for practice, repetition, and community learning.
+            </p>
 
-        <p><b>Changes to This Privacy Policy</b></p>
-        
-        We may update our Privacy Policy from time to time. Thus, you are advised to review this page periodically for any changes. We will notify you of any changes by posting the new Privacy Policy on this page.
+            <h3 data-i18n="key_features_title">Key Features</h3>
 
-        This policy is effective as of 2021-04-03
+            <ul>
+                <li data-i18n="feature_flashcards">
+                    <strong>Flashcard Learning:</strong>
+                    Create and study personalized flashcards to memorize foreign words efficiently using proven spaced repetition methods.
+                </li>
+                <li data-i18n="feature_share">
+                    <strong>Share with Friends:</strong>
+                    Easily share your flashcard sets with friends and learn together by exchanging vocabulary collections.
+                </li>
+                <li data-i18n="feature_tests">
+                    <strong>Knowledge Tests:</strong>
+                    Test your progress with interactive quizzes designed to reinforce memory and improve long-term retention.
+                </li>
+                <li data-i18n="feature_community">
+                    <strong>World Community:</strong>
+                    Add your own cards to the global World library and learn from other users shared vocabulary and expressions.
+                </li>
+                <li data-i18n="feature_pdf">
+                    <strong>PDF Test Generator:</strong>
+                    Generate printable PDF tests for offline practice, including vocabulary checks and spelling exercises.
+                </li>
+                <li data-i18n="feature_widgets">
+                    <strong>Home Screen Widgets:</strong>
+                    Keep learning active every day with widgets that display words directly on your phone’s home screen.
+                </li>
+            </ul>
 
-        <p><b>Contact Us</b></p>
+            <h3 data-i18n="summary_title">Summary</h3>
 
-        If you have any questions or suggestions about our Privacy Policy, do not hesitate to contact us at sugricompany@icloud.com.
-        
-    </BODY>
-</HTML>
+            <p data-i18n="summary_text">
+                World Words helps you learn faster, retain more, and stay consistent by combining flashcards, testing,
+                social learning, and daily reminders — all in one place.
+            </p>
+
+        </div>
+
+        <!-- PRIVACY POLICY -->
+        <h2 data-i18n="privacy_policy_title">Privacy Policy</h2>
+
+        <p data-i18n="privacy_policy_text1">
+            Uliana Gritchina built the <strong>World Words</strong> app as an Ad Supported application.
+            This SERVICE is provided at no cost and is intended for use as is.
+        </p>
+
+        <p data-i18n="privacy_policy_text2">
+            This page is used to inform visitors regarding our policies with the collection, use, and disclosure of Personal Information
+            if anyone decided to use our Service.
+        </p>
+
+        <p data-i18n="privacy_policy_text3">
+            If you choose to use our Service, you agree to the collection and use of information in relation to this policy.
+            The Personal Information that we collect is used for providing and improving the Service.
+            We will not use or share your information except as described in this Privacy Policy.
+        </p>
+
+        <!-- PREMIUM -->
+        <h2 data-i18n="premium_title">World Words Premium</h2>
+
+        <div class="card">
+           <p data-i18n="premium_includes"><strong>Subscription includes:</strong></p>
+           <ul>
+               <li data-i18n="premium_unlimited_flashcards">Unlimited flashcard storage</li>
+               <li data-i18n="premium_no_ads">Remove all ads for a clean learning experience</li>
+               <li data-i18n="premium_unlimited_pinned">Unlimited pinned flashcards for quick access</li>
+               <li data-i18n="premium_app_icons">Exclusive app icon styles</li>
+           </ul>
+           <p data-i18n="premium_price"><strong>Price:</strong> $0.99 per month</p>
+        </div>
+
+        <!-- DATA -->
+        <h2 data-i18n="data_title">Information Collection and Use</h2>
+
+        <p data-i18n="data_text1">
+            For a better experience, we may require personally identifiable information such as Name.
+        </p>
+
+        <p data-i18n="data_text2">
+            Third-party services may collect information used to identify you:
+        </p>
+
+        <ul>
+            <li><a href="https://yandex.ru/adv" target="_blank" data-i18n="link_yandex">Yandex Ads</a></li>
+            <li><a href="https://firebase.google.com/docs/analytics" target="_blank" data-i18n="link_google_firebase">Google Firebase Analytics</a></li>
+        </ul>
+
+        <p data-i18n="data_text3">
+            In case of errors, we collect Log Data such as device info, OS version, IP address, usage time and statistics.
+        </p>
+
+        <!-- SERVICE PROVIDERS -->
+        <h2 data-i18n="service_providers_title">Service Providers</h2>
+
+        <p data-i18n="service_providers_text">We may use third-party companies to:</p>
+        <ul>
+            <li data-i18n="service_provider1">Provide the Service</li>
+            <li data-i18n="service_provider2">Maintain and improve the Service</li>
+            <li data-i18n="service_provider3">Analyze usage</li>
+        </ul>
+        <p data-i18n="service_providers_note">These providers are not allowed to misuse your data.</p>
+
+        <!-- SECURITY -->
+        <h2 data-i18n="security_title">Security</h2>
+        <p data-i18n="security_text">
+            We use commercially acceptable means to protect your data, but no method is 100% secure.
+        </p>
+
+        <!-- CONTACT -->
+        <h2 data-i18n="contact_title">Contact</h2>
+        <div class="contact">
+            <a href="mailto:sugricompany@icloud.com" data-i18n="contact_email">sugricompany@icloud.com</a><br>
+            <a href="https://t.me/WorldWordsApp" target="_blank" data-i18n="contact_telegram">Telegram Support</a>
+        </div>
+
+        <!-- TELEGRAM -->
+        <h2 data-i18n="telegram_title">Telegram Channel</h2>
+        <div class="telegram">
+            <span data-i18n="telegram_text">Every day we publish new words and expressions for learning English.</span><br><br>
+            <a href="https://t.me/worldwordswithoutborders" target="_blank" data-i18n="telegram_link">Join World Words Channel</a>
+        </div>
+
+    </div>
+
+    <footer>
+        <span data-i18n="footer">2026 Sugri. World Words</span>
+    </footer>
+</div>
+
+<script>
+// Объявляем переводы
+const translations = {
+    en: {
+        title: "World Words",
+        app_description_title: "Application Description",
+        app_description_text1: "World Words is a powerful and intuitive language learning app designed to help you memorize vocabulary effectively using interactive flashcards and active recall techniques.",
+        app_description_text2: "The app turns language learning into a simple daily habit with tools for practice, repetition, and community learning.",
+        key_features_title: "Key Features",
+        feature_flashcards: "Flashcard Learning: Create and study personalized flashcards to memorize foreign words efficiently using proven spaced repetition methods.",
+        feature_share: "Share with Friends: Easily share your flashcard sets with friends and learn together by exchanging vocabulary collections.",
+        feature_tests: "Knowledge Tests: Test your progress with interactive quizzes designed to reinforce memory and improve long-term retention.",
+        feature_community: "World Community: Add your own cards to the global World library and learn from other users shared vocabulary and expressions.",
+        feature_pdf: "PDF Test Generator: Generate printable PDF tests for offline practice, including vocabulary checks and spelling exercises.",
+        feature_widgets: "Home Screen Widgets: Keep learning active every day with widgets that display words directly on your phone’s home screen.",
+        summary_title: "Summary",
+        summary_text: "World Words helps you learn faster, retain more, and stay consistent by combining flashcards, testing, social learning, and daily reminders — all in one place.",
+        privacy_policy_title: "Privacy Policy",
+        privacy_policy_text1: "Uliana Gritchina built the World Words app as an Ad Supported application. This SERVICE is provided at no cost and is intended for use as is.",
+        privacy_policy_text2: "This page is used to inform visitors regarding our policies with the collection, use, and disclosure of Personal Information if anyone decided to use our Service.",
+        privacy_policy_text3: "If you choose to use our Service, you agree to the collection and use of information in relation to this policy. The Personal Information that we collect is used for providing and improving the Service. We will not use or share your information except as described in this Privacy Policy.",
+        premium_title: "World Words Premium",
+        premium_includes: "Subscription includes:",
+        premium_unlimited_flashcards: "Unlimited flashcard storage",
+        premium_no_ads: "Remove all ads for a clean learning experience",
+        premium_unlimited_pinned: "Unlimited pinned flashcards for quick access",
+        premium_app_icons: "Exclusive app icon styles",
+        premium_price: "Price:",
+        "premium_price_value": "$0.99 per month",
+        "premium_price_currency": "$0.99 per month",
+        data_title: "Information Collection and Use",
+        data_text1: "For a better experience, we may require personally identifiable information such as Name.",
+        data_text2: "Third-party services may collect information used to identify you:",
+        link_yandex: "Yandex Ads",
+        link_google_firebase: "Google Firebase Analytics",
+        data_text3: "In case of errors, we collect Log Data such as device info, OS version, IP address, usage time and statistics.",
+        service_providers_title: "Service Providers",
+        service_providers_text: "We may use third-party companies to:",
+        service_provider1: "Provide the Service",
+        service_provider2: "Maintain and improve the Service",
+        service_provider3: "Analyze usage",
+        service_providers_note: "These providers are not allowed to misuse your data.",
+        security_title: "Security",
+        security_text: "We use commercially acceptable means to protect your data, but no method is 100% secure.",
+        contact_title: "Contact",
+        contact_email: "sugricompany@icloud.com",
+        contact_telegram: "Telegram Support",
+        telegram_title: "Telegram Channel",
+        telegram_text: "Every day we publish new words and expressions for learning English.",
+        telegram_link: "Join World Words Channel",
+        footer: "2026 Sugri. World Words"
+    },
+    ru: {
+        title: "World Words",
+        app_description_title: "Описание приложения",
+        app_description_text1: "<strong>World Words</strong> — мощное и интуитивное приложение для изучения языков, предназначенное помочь вам эффективно запоминать словарный запас с помощью интерактивных карточек и техник активного воспроизведения.",
+        app_description_text2: "Приложение превращает изучение языка в простую ежедневную привычку с инструментами для практики, повторения и обучения в сообществе.",
+        key_features_title: "Ключевые функции",
+        feature_flashcards: "<strong>Обучение с карторками:</strong> Создавайте и изучайте персонализированные карточки для запоминания иностранных слов с помощью проверенных методов интервальных повторений.",
+        feature_share: "<strong>Делиться с друзьями:</strong> Легко делитесь наборами карточек с друзьями и учитесь вместе, обмениваясь словарными коллекциями.",
+        feature_tests: "<strong>Тесты знаний:</strong> Проверяйте свои знания с помощью интерактивных тестов, направленных на закрепление памяти и улучшение долгосрочного запоминания.",
+        feature_community: "<strong>Мировое сообщество:</strong> Добавляйте свои карточки в глобальную библиотеку World и учитесь у других пользователей, делящихся словарями и выражениями.",
+        feature_pdf: "<strong>Генератор PDF-тестов:</strong> Создавайте печатные PDF-тесты для оффлайн-практики, включая проверку слов и упражнения на правописание.",
+        feature_widgets: "<strong>Виджеты на главном экране:</strong> Поддерживайте ежедневное обучение с помощью виджетов, показывающих слова прямо на главном экране телефона.",
+        summary_title: "Резюме",
+        summary_text: "World Words помогает учиться быстрее, сохранять больше информации и быть последовательным, объединяя карточки, тесты, социальное обучение и ежедневные напоминания — всё в одном месте.",
+        privacy_policy_title: "Политика конфиденциальности",
+        privacy_policy_text1: "Uliana Gritchina создала приложение <strong>World Words</strong> как приложение с поддержкой рекламы. Это обслуживание предоставляется бесплатно и предназначено для использования как есть.",
+        privacy_policy_text2: "Эта страница предназначена для информирования посетителей о наших политиках сбора, использования и раскрытия личной информации, если кто-то решил воспользоваться нашим сервисом.",
+        privacy_policy_text3: "Если вы решите использовать наш сервис, вы соглашаетесь с сбором и использованием информации согласно этой политике. Собранная личная информация используется для предоставления и улучшения сервиса. Мы не будем использовать или делиться вашей информацией, кроме как описано в этой политике.",
+        premium_title: "Премиум World Words",
+        premium_includes: "Подписка включает:",
+        premium_unlimited_flashcards: "Неограниченное хранение карточек",
+        premium_no_ads: "Удаляет все объявления для чистого обучения",
+        premium_unlimited_pinned: "Неограниченное закрепление карточек для быстрого доступа",
+        premium_app_icons: "Эксклюзивные стили иконок приложения",
+        premium_price: "Цена:",
+        "premium_price_value": "$0.99 в месяц",
+        "premium_price_currency": "$0.99 в месяц",
+        data_title: "Сбор и использование информации",
+        data_text1: "Для лучшего опыта мы можем требовать личную информацию, такую как Имя.",
+        data_text2: "Сторонние сервисы могут собирать информацию, используемую для идентификации вас:",
+        link_yandex: "Яндекс Реклама",
+        link_google_firebase: "Google Firebase Analytics",
+        data_text3: "При ошибках мы собираем лог-данные, такие как информация о устройстве, версия ОС, IP-адрес, время использования и статистика.",
+        service_providers_title: "Поставщики услуг",
+        service_providers_text: "Мы можем использовать сторонние компании для:",
+        service_provider1: "Обеспечения услуги",
+        service_provider2: "Поддержки и улучшения сервиса",
+        service_provider3: "Анализа использования",
+        service_providers_note: "Эти поставщики не имеют права злоупотреблять вашими данными.",
+        security_title: "Безопасность",
+        security_text: "Мы используем допустимые методы для защиты ваших данных, однако ни один метод не является на 100% безопасным.",
+        contact_title: "Контакты",
+        contact_email: "sugricompany@icloud.com",
+        contact_telegram: "Поддержка в Telegram",
+        telegram_title: "Канал в Telegram",
+        telegram_text: "Каждый день мы публикуем новые слова и выражения для изучения английского.",
+        telegram_link: "Присоединяйтесь к каналу World Words",
+        footer: "2026 Sugri. World Words"
+    }
+};
+
+let currentLang = 'en';
+
+function updateTexts() {
+    document.querySelectorAll('[data-i18n]').forEach(elem => {
+        const key = elem.getAttribute('data-i18n');
+        if (translations[currentLang][key]) {
+            if (elem.tagName === 'A' && elem.hasAttribute('data-i18n')) {
+                // Для ссылок сохраняем атрибуты или меняем текст
+                if (elem.children.length === 0) {
+                    elem.textContent = translations[currentLang][key];
+                }
+            } else {
+                elem.innerHTML = translations[currentLang][key];
+            }
+        }
+    });
+    // Обновляем заголовок
+    document.title = translations[currentLang]['title'];
+}
+
+// Обработчики переключения языка
+document.getElementById('lang-en').addEventListener('click', () => {
+    currentLang = 'en';
+    updateTexts();
+});
+document.getElementById('lang-ru').addEventListener('click', () => {
+    currentLang = 'ru';
+    updateTexts();
+});
+
+// Инициализация
+updateTexts();
+</script>
+</body>
+</html>
