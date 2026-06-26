@@ -22,13 +22,18 @@ body {
     box-shadow: 0 10px 30px rgba(0,0,0,.08);
 }
 /* Шапка */
-.header img {
-    width: 100%;
-    height: 260px;
-    object-fit: cover;
-    display: block;
-    filter: brightness(0.75);
-}
+    .header {
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+        height: 320px; /* или нужная высота, например, 260px */
+    }
+    .header img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
 .content {
     padding: 40px;
 }
@@ -164,7 +169,7 @@ footer {
             <h2 data-i18n="app_description_title">Описание приложения</h2>
 
             <p data-i18n="app_description_text1">
-                <strong>World Words</strong> — мощное и интуитивное приложение для изучения языков, созданное для эффективного запоминания словарного запаса с помощью интерактивных карточек и техник активного воспроизведения.
+                <strong>World Words</strong> - мощное и интуитивное приложение для изучения языков, созданное для эффективного запоминания словарного запаса с помощью интерактивных карточек и техник активного воспроизведения.
             </p>
 
             <p data-i18n="app_description_text2">
